@@ -3,12 +3,15 @@
 	margin: 0;
 }
 .modal{
-    position:fixed;
+     position:fixed;
      z-index:999; 
      left:43%; 
      top:46%;
-}
+     width: 800px;
+   }
 .modal img{
 	cursor: pointer;
-	background-size: 100% 100%;	
+	width: 300px;
+	height:70px;
 }
+
