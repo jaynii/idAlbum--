@@ -1,0 +1,72 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+.bg {
+	width: 100% !important;
+	height: auto !important;
+	position: fixed;
+	background-size: contain;
+}
+
+.header {
+	position: absolute;
+	top: 300px;
+	left: 100px;
+}
+
+p.title {
+	position: absolute;
+	top: 3px;
+	width: 300px;
+	left: 50px;
+	font-size: 30px;
+	color: #71bbfa;
+	letter-spacing: 1px;
+}
+
+.content {
+	position: absolute;
+	top: 390px;
+	left: 90px;
+	font-size: 18px;
+	width: 350px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.content p {
+	color: #4c4c4c;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+	color: #71bbfa;
+}
+
+p#info_bottom {
+	position: absolute;
+	text-align: center;
+	width: 400px;
+	left: -40px;
+}
+
+.footer {
+	position: absolute;
+	top: 560px;
+	left: 105px;
+}
+
+.btn1_img {
+	padding-bottom: 10px;
+}
+
+.btn2_img {
+	padding-left: 15px;
+}

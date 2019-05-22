@@ -1,0 +1,14 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.modal{
+    position:fixed;
+     z-index:999; 
+     left:43%; 
+     top:46%;
+}
+.modal img{
+	cursor: pointer;
+	background-size: 100% 100%;	
+}

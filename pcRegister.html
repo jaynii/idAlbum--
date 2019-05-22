@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>idAlbum-注册</title>
+		
+		<link rel="stylesheet" href="css/pc.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<script src="js/zepto.min.js"></script>
+		<!--<script>
+			! function() {
+				var devices = ["iPhone", "Android", "Windows Phone"]
+				var ua = window.navigator.userAgent
+				var url = document.location.toString(); //获取url地址
+				var urlStr = url.slice(url.indexOf('?') + 1); //获取问号后所有的字符串			
+				for(var i = 0; i < devices.length; i++) {
+					if(ua.indexOf(devices[i]) != -1) {
+						window.location.href = 'ipRegister.html?' + urlStr;
+					}
+				}
+			}()
+		</script>-->
+	</head>
+	<body>
+		<div class="cover" id="shade"></div>
+		<div class="rules_detail" id="rules_block">
+			<div class="rules_box">
+				<h5>隐私权政策</h5>
+				<div class="box">
+					<p class="font-one">欢迎您使用idAlbum的服务！使用idAlbum电脑软件时(下称「本软件」)，阁下将会被视作接受本软件的条款及细则，请点击「同意」以继续使用本软件。如阁下不同意受下述有关使用条款的约束，请勿使用本软件。</p>
+					<br />
+					<p class="font-one">本软件是由Fung Shing Co. Limited (下称「FSC」、「本公司」或「我们」) 拥有及运作。本使用条款限制本公司及其关联公司、子公司、僱员、代理人、承办商及任何第三方内容提供者就该等内容、资料、商品及/或服务的使用所承担的责任。 您使用idAlbum，即表示同意受您与Fung Shing Company Ltd （位于香港德辅道中275号龙记大厦904室的香港公司）（「 我们」）之间所签订的本条款所约束。 如未满18岁（或在您的司法管辖区会被视为未成年人的有关年龄），您的家长或监护人（以其本人和您的代表身份）必须同意本条款，您才可使用idAlbum。
+					</p><br />
+					<h6 class="box-one">1.知识产权</h6>
+					<p>本软件及其可用的任何资料，包括文字、图形、图标、图像及商标均受FSC或我们的特许人所拥有或控制的版权、商标及其他知识产权的保护。未经我们事先书面许可，您不得以任何方式複印、複製、上传、下载、传输、存储于检索系统、修改、变更或公开展示或分发本软件的内容或其任何部分作任何用途。所有资料和服务均受到知识产权保护。您必须遵守下列要求：</p>
+					<h7>1)不记录、複製、或从本软件中创建衍生作品；</h7>
+					<h7>2)不于公众场所发布、张贴或展示本软件所提供的资料或内容及不在互联网上或任何其他网络分发或使本软件可供使用；</h7>
+					<h7>3)不使用本软件作任何不道德、非法或可能被认定为有威胁性、侮辱性或有害的其他目的；</h7>
+					<br />
+					<h6>2.收集个人资料</h6>
+					<p>FSC会要求阁下提供以下个人资料，包括但不限于，称谓、姓名、性别、电话号码、电邮地址、邮寄地址、生日资料、国籍、个人兴趣及最喜爱的产品类别。当您使用本软件时，阁下可能会被要求提供个人资料，而我们保留在进行帐户登记及网上购物等情况下核对阁下身份的权利。本公司载于官方网站的私隐政策声明适用于此。</p>
+
+					<br />
+					<h6>3.免责声明</h6>
+					<p>FSC特此声明，在法律允许的最大范围内，排除所有有关本软件的，无论明示或默示、法定或其他方面的保证、条件、承诺、陈述及条款。阁下将自行承担使用本软件的风险。本软件所提供的资料仅供参考之用，我们不保证该等资料的准确性、完整性、可靠性或及时性。本公司概不负责阁下就任何直接或间接使用或依赖此等资料所引起的索赔、债务、损失或损害。 本公司不负责透过本软件及/或服务发送通信的安全性和保密性，包括但不限于透过无线装置或其他设备上的应用程式及/或服务使用本软件及/或服务。我们不保证本软件的使用不会被中断、不会有任何延误、故障、错误、遗漏或资料丢失、不会传输病毒或其他破坏性的内容或不会对阁下的手机造成损害。尤其我们对下载本软件的任何中断，对阁下的装置内的其他软件、程式、或应用程式造成的干扰，或任何其他可能会不时出现的技术缺陷不承担任何责任。阁下将自行负责因下载或使用本软件而对阁下的装置所造成的损坏或数据丢失。
+					</p>
+					<br />
+					<h6>4.第三方网站和服务</h6>
+
+					<p>本软件可能提供我们无法控制的第三方所运作的应用程式、网站、服务、或包含该等第三方所运作的产品或服务的广告连结，而本公司对此排除所有责任。阁下自行承担使用该等网站和服务的风险。您的资料可能会在下载或使用本软件的过程中向公众披露（无论是透过互联网或任何其他方式）。阁下明白阁下对本软件的使用及可使用的能力可能会受到其他第三方的条款和细则以及私隐政策的限制，包括但不限于流动软件平台、应用程式商店、游戏平台和付款服务供应商。在任何情况下，本公司不为第三方的条款及细则、行为及其使用您的个人资料而承担任何责任。</p>
+					<br />
+					<h6>5.idAlbum的广告内容</h6>
+
+					<p>idAlbum可能包含广告或商业内容。您同意我们可以在idAlbum内加入、显示及在其他方面传播广告或商业内容，并（在合理可行的情况下）就该等广告或商业内容作出识别。您亦同意，正如我们的《idAlbum私隐政策》已更详细解释，我们会使用针对目标对象的广告，尝试提供更适合您并对您有用的广告。</p>
+					<br />
+					<h6>6.责任限制</h6>
+
+					<p>FSC保留随时在不作事先通知的情况下修改或修订本使用条款的权利。在公佈使用条款的变更后继续使用本软件，即表示您同意受使用条款的最新版本约束。 我们会在不作事先通知的情况下不时发放本软件的更新版本。我们建议您下载或更新本软件的最新版本以获取最新资料及功能。 FSC保留在任何时间及不时在不作事先通知的情况下修改、暂停或（暂时或永久）中止本软件（或其任何部分）。本公司不会就本软件的任何修改、暂停或中止而对您或任何第三方承担任何责任。本公司也可以限制某些功能和服务，或限制您对本软件的部分或全部的使用，而不作另行通知或承担任何责任。本公司可全权酌情决定是否提供有关本软件的维修和支援服务。
+					</p>
+					<br />
+					<h6>7.终止</h6>
+					<p>如果您未能遵守本特许协议的任何条款和细则，您在本特许协议项下的权利将立即及自动被终止，而本公司毋须另行通知。终止时，您必须立即停止对本软件的所有使用，并销毁所有阁下拥有或控制的本软件的副本。该终止将不会限制本公司在法律或衡平法上的任何其他权利或补救措施。 如中文版本与英文版本的使用条款有任何差异，应以英文版本为准。
+					</p>
+					<br />
+					<h6>8.管辖法律和争议的解决</h6>
+					<p>除了在以下范围内： (i) 任何纳入本条款的适用额外条款另行规定，或 (ii) 您的司法管辖区的适用法律和规例另行规定（例如，您可能在您的司法管辖区有法定权利向当地法院（包括小额钱债法院提出申索或对申索作出抗辩）： (a)本条款以及本条款产生或有关的任何争议或申索将受香港特别行政区的法律管辖；及 (b)凡因本条款产生、有关或相关的任何争议、纠纷或申索（不论是合约、侵权或其他方面的），包括本条款的存在、效力、解释、履行、违反或终止，均将根据提交《仲裁通知》时有效的《香港国际仲裁中心机构仲裁规则》，提交香港国际仲裁中心最后解决。仲裁地点为香港。仲裁庭只由一名仲裁员组成。仲裁程序所用语言为英文。
+					</p>
+					<br />
+					<h6>9.联系我们</h6>
+					<p>感谢您查閲本条款 – 希望您喜欢idAlbum。<br /> 如对本条款有任何疑问，或欲就本条款向我们发出任何通知，请按以下电邮地址与我们联络：
+						<a>support@id221.com。</a>
+						<br />
+						<br />
+				</div>
+			</div>
+
+			<div id="close-btn"><span>我知道了</span></div>
+		</div>
+		
+        <!-----coupon------>
+            <div class="coupon_bg" style=" position: fixed;height: 100%; width: 100%;background-image: url('img/pc_coupon.png');background-repeat: no-repeat;background-size: 100% 100%;z-index: 1;"></div>
+        	<div class="modal">
+            <img src="img/sign_up.png" width="100px" height="30px" class="sign_up_btn"/>
+            <!--<a class="next_btn" onClick="custom_close()"><img src="img/next.png" width="100px" height="30px"/></a>-->
+           </div>
+           
+           <script>
+           	$('.sign_up_btn').click(function(){
+           	      $('.modal').hide();
+           	      $('.coupon_bg').hide();
+           	});
+           	
+           </script>
+        <!-----coupon------>  
+        
+        
+		<div class="registerwrap">
+			<div class="wrap">
+				<div class="main" id="phoneRegister">
+
+					<div class="login-register" id="register-con">
+
+						<div id="pannel-phone" class="lr-con">
+							<p class="c_r_name">用户注册</p>
+							<label class="u-area" style="margin-top: 5px"><span><img src="img/area.png" style="width: 18px;height: 20px"/></span>					
+				            <select class="select_list" id="select_list">
+	                        <option value="86">中国 (大陆)</option>
+	                        <option value="852">中国  (香港)</option>
+	                        <option value="886">中国  (台湾)</option>
+                            </select>
+				            </label>
+							<label class="u-email" style="margin-top: 12px"><span><img src="img/phone.png" style="width: 16px;height: 20px"/></span><input type="text" id="phone" placeholder="手机号" /></label>
+							<p class="phone_red_error"></p>
+							<label class="u-pw"><span><img src="img/password.png" style="width: 18px;height: 22px"/></span><input type="password" id="phone-pass" placeholder="至少输入6位密码" /></label>
+							<p class="pwd_red_error"></p>
+							<label class="u-pw"><span><img src="img/password.png" style="width: 18px;height: 22px"/></span><input type="password" id="phone-confirm-pass" placeholder="确认密码" /></label>
+							<p class="repwd_red_error"></p>
+							<div class="line-verify">
+								<div style="border-bottom: 1px solid #d5d5d8;height: 30px">
+									<label class="u-pw" style="border-bottom: none"><span><img src="img/verified.png" style="width: 18px;height: 22px"/></span><input type="text" id="verify" placeholder="手机验证码" /></label>
+									<span id="btn-verify" class="btn-verify-code">获取验证码</span>
+								</div>
+							</div>
+							<p class="veryfy_red_error"></p>
+							<div class="btn-register">
+								<div class="mycheck true ">
+									<input type="checkbox" value="2" id="checkbox2" name="" checked="checked" />
+									<label for="checkbox2" class="check" id="rulesLabel2"></label>
+								</div>
+								<p class="agreement">我已阅读并同意使用
+									<a class="rules">《idAlbum服务条款》</a>
+								</p>
+							</div>
+							<p class="agreement_red_error"></p>
+							<button id="register-phone">
+                            <span>注 册</span>           
+                           </button>
+							<p style="margin: 25px; text-align: center;color: #999;">版权所有 ©2019 idAlbum保留所有权利</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 注册成功 -->
+		<script type="text/javascript">
+			var G = {};
+			G.registerType = "phone"; //email
+			G.timer = 0; //定时器
+			G.count = 0; //计数器
+			var vercode;
+			var register = $("#register-phone");
+			var Checkboxinput = $('.mycheck input');
+
+			Checkboxinput.on("click", function() {
+				if(!Checkboxinput.is(':checked')) {
+					$('.agreement_red_error').text("请先同意用户协议!")
+					register.css("background", "#696969");
+				} else {
+					$('.agreement_red_error').text("")
+					register.css("background", "#3d86ca");
+				}
+			});
+
+			//主程序入口
+			function bootstrap() {
+				addEvent();
+				//				occasionText();
+			}
+
+			//获取验证码
+			function getVerify() {
+				var phone = $.trim($("#phone").val());
+				var select_area = $.trim($("#select_list option").val());
+
+				if(phone.length == 0) {
+					$('.phone_red_error').text("请输入手机号码!");
+					return;
+				}
+				if(G.count > 0) {
+					return;
+				}
+
+				$.post("https://idchat.id221.com.cn/index.php/user/apiother/getCode", {
+						phone: select_area + ' ' + phone
+
+					})
+					.done(function(res) {
+						console.log(res);
+						var code = $.parseJSON(res).state.code;
+						vercode = $.parseJSON(res).data.code;
+						//						$("#hide").val(vercode);
+						console.log(vercode);
+						if(code == 31) {
+							alert(res.msg);
+							return;
+						} else if(code == 0) {
+							$('.veryfy_red_error').text("信息已经发送，请等待接收。");
+							G.count = 60;
+							$("#btn-verify").text(G.count + "s").attr("disabled", "disabled");
+							G.timer = setInterval(function() {
+								if(G.count > 0) {
+									G.count--;
+									$("#btn-verify").text(G.count + "s").attr("disabled", "disabled");
+								} else {
+									$("#btn-verify").text("获取验证码").removeAttr("disabled");
+								}
+							}, 2000);
+						}
+					})
+					.fail(function() {
+						alert("服务错误，稍后重试");;
+					})
+			}
+
+			//获取url参数			
+			function GetUrlParam(paraName) {
+				var url = document.location.toString();
+				var arrObj = url.split("?");
+				if(arrObj.length > 1) {
+
+					var arrPara = arrObj[1].split("&");
+					var arr;
+
+					for(var i = 0; i < arrPara.length; i++) {
+						arr = arrPara[i].split("=");
+
+						if(arr != null && arr[0] == paraName) {
+							return arr[1];
+						}
+					}
+					return "";
+				} else {
+					return "";
+				}
+			}
+			//手机注册
+			function signupByPhone() {
+				//				var url = document.location.toString(); //获取url地址
+				//				var urlStr = url.slice(url.indexOf('?') + 1); //获取问号后所有的字符串
+				//				var arr = urlStr.split('&'); //通过&符号将字符串分割转成数组
+				//				var url_recommendId = arr[0].split("=")[1]; //获取数组中第一个参数                
+
+				var select_area = $.trim($("#select_list option").val());
+				var phone = $.trim($("#phone").val());
+				var verify = $.trim($("#verify").val());
+				var pwd = $.trim($("#phone-pass").val());
+				var repwd = $.trim($("#phone-confirm-pass").val());
+				var register = $("#register-phone"); //注册
+				var Checkboxinput = $('.mycheck input'); //协议
+				var url_recommendId = GetUrlParam("recommendId");
+
+				console.log(select_area);
+
+				if(phone.length == 0) {
+					$('.phone_red_error').text("手机号码不能为空!");
+					return;
+				}
+				if(pwd.length == 0) {
+					$('.pwd_red_error').text("密码不能为空!");
+					return;
+				}
+				if(pwd.length < 6) {
+					$('.pwd_red_error').text("密码至少要6位!");
+					return;
+				}
+				if(pwd != repwd) {
+					$('.repwd_red_error').text("两次输入密码不一致!");
+					return;
+				}
+
+				if(verify != vercode) {
+					$('.veryfy_red_error').text("请输入正确的验证码!");
+					return;
+				}
+
+				if(!Checkboxinput.is(':checked')) {
+					$('.agreement_red_error').text("请先同意用户协议!");
+					return;
+				}
+
+				$("#register-phone").text("注 册 中...").attr("disabled", "disabled");
+
+				$.post("http://47.52.175.73/index.php/album/api/registByRecommender", {
+						recommendId: url_recommendId,
+						phone: phone,
+						password: pwd,
+						area: select_area
+
+					})
+					.done(function(r) {
+						//						console.log(r);			
+						var code = $.parseJSON(r).state.code;
+						vercode = $.parseJSON(r).data.code;
+						//						$("#hide").val(vercode);
+						//                      console.log(vercode);
+						if(code == 0) {
+							alert('注册成功');
+							window.location.href = "http://www.idalbum.com";
+						} else {
+							//							alert(res.msg);
+							//							return;                          
+							alert("注册失败");
+
+						}
+					})
+					.fail(function() {
+						alert("服务错误，稍后重试");;
+					})
+			}
+
+			//事件中心
+			function addEvent() {
+
+				//获取验证码
+				$("#btn-verify").click(function(e) {
+					e.preventDefault();
+					getVerify();
+				});
+
+				//切换至手机面板
+				$("#btn-use-phone").click(function(e) {
+					e.preventDefault();
+					$("#pannel-email").hide();
+					$("#pannel-phone").show();
+				});
+
+				//手机注册
+				$("#register-phone").click(function(e) {
+					e.preventDefault();
+					signupByPhone();
+				});
+				//手机号码数字提示
+				$("#phone").blur(function() {
+					var num = $.trim($("#phone").val());
+					var reg = new RegExp("^[0-9]*$");
+					if(!reg.test(num)) {
+						$('.phone_red_error').text("请输入数字");
+					}
+				});
+
+				$("#phone").focus(function() {
+					$('.phone_red_error').text("");
+				});
+
+				$("#phone-pass").focus(function() {
+					$('.pwd_red_error').text("");
+				});
+
+				$("#phone-confirm-pass").focus(function() {
+					$('.repwd_red_error').text("");
+				});
+
+				$("#verify").focus(function() {
+					$('.veryfy_red_error').text("");
+				});
+
+				$("#verify").focus(function() {
+					$('.veryfy_red_error').text("");
+				});
+
+			}
+
+			//启动
+			$(bootstrap);
+		</script>
+
+		<script>
+			$("body").on("click", "#close", function(e) {
+				// 冒泡
+				e.stopPropagation();
+				//document.body.style.margin=0;
+				$("#shade").hide()
+				$("#shade_block").css({
+					'z-index': -1,
+					'opacity': 0
+				});
+			})
+			//解决滚动穿透问题
+			function fixedBody() {
+				var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+				document.body.style.cssText += 'position:fixed;top:-' + scrollTop + 'px;';
+			}
+
+			function looseBody() {
+				var body = document.body;
+				body.style.position = '';
+				var top = body.style.top;
+				document.body.scrollTop = document.documentElement.scrollTop = -parseInt(top);
+				body.style.top = '';
+			}
+
+			$(".rules").click(function() {
+				$("#shade").show()
+				$("#rules_block").show()
+				$("html").removeClass("stop");
+				fixedBody();
+
+			})
+
+			$("#close-btn").click(function() {
+				$("#shade").hide()
+				$("#rules_block").hide()
+				$("body").removeClass("stop");
+				looseBody();
+			})
+
+			$('#rulesLabel').click(function() {
+				$(this).toggleClass('uncheck')
+			})
+			$('#rulesLabel2').click(function() {
+				$(this).toggleClass('uncheck')
+			})
+		</script>
+
+	</body>
+
+</html>

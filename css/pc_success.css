@@ -1,0 +1,32 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#container{
+	margin: 0 auto;
+}
+.content {
+
+	text-align: center;
+}
+p.title{
+	display: inline-block;
+	float: left;
+}
+
+.content p {
+	color: #4c4c4c;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+	color: #71bbfa;
+}
+
+p#info_bottom {
+	text-align: center;
+	
+}
+
+
