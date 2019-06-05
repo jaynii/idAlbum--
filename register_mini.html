@@ -272,7 +272,11 @@
 					$('.repwd_red_error').text("两次输入密码不一致");
 					return;
 				}
-
+                if(verify == 0){
+                	alert("请输入验证码");
+                	return;
+                }
+                
 				if(vercode != verify) {
 					$('.veryfy_red_error').text("请输入正确的验证码");
 					return;
@@ -283,7 +287,7 @@
 					return;
 				}
 
-				$("#register-phone").text("注 册 中...").attr("disabled", "disabled");
+//				$("#register-phone").text("注 册 中...").attr("disabled", "disabled");
 
 				$.post("http://47.52.175.73/index.php/album/api/registByRecommender", {
 						recommendId: url_recommendId,

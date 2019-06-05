@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="css/login.css" />
 		<link rel="stylesheet" href="css/register.css" />
 		<script src="js/zepto.min.js"></script>
-		<!--<script>
+		<script>
 			! function() {
 				var devices = ["iPhone", "Android", "Windows Phone"]
 				var ua = window.navigator.userAgent
@@ -14,11 +14,11 @@
 				var urlStr = url.slice(url.indexOf('?') + 1); //获取问号后所有的字符串			
 				for(var i = 0; i < devices.length; i++) {
 					if(ua.indexOf(devices[i]) != -1) {
-						window.location.href = 'ipRegister.html?' + urlStr;
+						window.location.href = 'register_mini.html?' + urlStr;
 					}
 				}
 			}()
-		</script>-->
+		</script>
 	</head>
 	<body>
 		<div class="cover" id="shade"></div>
@@ -115,10 +115,10 @@
 							<label class="u-pw"><span><img src="img/password.png" style="width: 18px;height: 22px"/></span><input type="password" id="phone-confirm-pass" placeholder="确认密码" /></label>
 							<p class="repwd_red_error"></p>
 							<div class="line-verify">
-								<div style="border-bottom: 1px solid #d5d5d8;height: 30px">
-									<label class="u-pw" style="border-bottom: none"><span><img src="img/verified.png" style="width: 18px;height: 22px"/></span><input type="text" id="verify" placeholder="手机验证码" /></label>
-									<span id="btn-verify" class="btn-verify-code">获取验证码</span>
-								</div>
+							<div style="border-bottom: 1px solid #d5d5d8;height: 30px">
+							<label class="u-pw" style="border-bottom: none"><span><img src="img/verified.png" style="width: 18px;height: 22px"/></span><input type="text" id="verify" placeholder="手机验证码" /></label>
+							<span id="btn-verify" class="btn-verify-code">获取验证码</span>
+							</div>
 							</div>
 							<p class="veryfy_red_error"></p>
 							<div class="btn-register">
@@ -189,7 +189,8 @@
 						var code = $.parseJSON(res).state.code;
 						vercode = $.parseJSON(res).data.code;
 						//						$("#hide").val(vercode);
-						console.log(vercode);
+//						console.log(vercode);
+                        console.log(code);
 						if(code == 31) {
 							alert(res.msg);
 							return;
@@ -267,7 +268,11 @@
 					$('.repwd_red_error').text("两次输入密码不一致!");
 					return;
 				}
-
+                if(verify == 0){
+                	alert("请输入验证码");
+                	return
+                }
+               
 				if(verify != vercode) {
 					$('.veryfy_red_error').text("请输入正确的验证码!");
 					return;
@@ -278,7 +283,7 @@
 					return;
 				}
 
-				$("#register-phone").text("注 册 中...").attr("disabled", "disabled");
+//				$("#register-phone").text("注 册 中...").attr("disabled", "disabled");
 
 				$.post("http://47.52.175.73/index.php/album/api/registByRecommender", {
 						recommendId: url_recommendId,
@@ -292,19 +297,21 @@
 						var code = $.parseJSON(r).state.code;
 						vercode = $.parseJSON(r).data.code;
 						//						$("#hide").val(vercode);
-						//                      console.log(vercode);
+						                      console.log(code);
 						if(code == 0) {
 							alert('注册成功');
 							window.location.href = "success.html";
-						} else {
+						} else if(code==1) {
 							//							alert(res.msg);
 							//							return;                          
-							alert("注册失败");
+							alert("手机号已注册");
 
+						}else{
+							alert('注册失败');
 						}
 					})
 					.fail(function() {
-						alert("服务错误，稍后重试");;
+						alert("服务错误，稍后重试");
 					})
 			}
 
@@ -359,7 +366,6 @@
 				});
 
 			}
-
 			//启动
 			$(bootstrap);
 		</script>
